@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Product Page - Phone</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #358771;
+        }
+
+        .header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .left-side {
+            flex: 1 1 40%;
+            padding: 20px;
+            border-right: 1px solid #ddd;
+        }
+
+        .product-details {
+            flex: 1 1 60%;
+            padding: 20px;
+        }
+
+        .product-image {
+            text-align: center;
+        }
+
+        .product-image img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s;
+        }
+
+        .product-image img:hover {
+            transform: scale(1.1);
+        }
+
+        .product-details h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .product-details p {
+            font-size: 1.2em;
+            line-height: 1.5;
+            color: #555;
+        }
+
+        .price {
+            font-size: 1.8em;
+            color: #b12704;
+            margin: 20px 0;
+        }
+
+        .add-to-cart {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #ff9900;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .add-to-cart:hover {
+            background-color: #e68a00;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .left-side, .product-details {
+                flex: 1 1 100%;
+                padding: 10px;
+                border: none;
+            }
+
+            .left-side {
+                order: 2;
+            }
+
+            .product-details {
+                order: 1;
+            }
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+            margin-top: 20px;
+        }
+
+        .footer p {
+            margin: 0;
+            font-size: 1em;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            border-bottom: 2px solid #ccc;
+            cursor: pointer;
+        }
+
+        .tab {
+            padding: 10px 20px;
+            font-size: 1.2em;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 20px;
+            border-top: 2px solid #ccc;
+        }
+
+        .tab-active {
+            display: block;
+        }
+
+        .tab-active-btn {
+            border-bottom: 2px solid #358771;
+            font-weight: bold;
+        }
+
+        .reviews {
+            margin-top: 20px;
+        }
+
+        .review {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .review h4 {
+            margin: 0 0 5px;
+        }
+
+        .review p {
+            margin: 0;
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        .review span {
+            color: #b12704;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>Phone Store</h1>
+</div>
+
+<div class="container">
+    <div class="left-side">
+        <div class="tabs">
+            <div class="tab tab-active-btn" data-tab="description">Description</div>
+            <div class="tab" data-tab="specifications">Specifications</div>
+            <div class="tab" data-tab="reviews">Reviews</div>
+        </div>
+        <div id="description" class="tab-content tab-active">
+            <p>This latest smartphone comes with a sleek design and cutting-edge features. It's built to deliver top-notch performance for both work and play.</p>
+        </div>
+        <div id="specifications" class="tab-content">
+            <ul>
+                <li>Display: 6.5-inch OLED</li>
+                <li>Processor: Octa-core 2.8GHz</li>
+                <li>RAM: 8GB</li>
+                <li>Storage: 128GB</li>
+                <li>Battery: 4000mAh</li>
+                <li>Camera: 48MP + 12MP + 5MP</li>
+            </ul>
+        </div>
+        <div id="reviews" class="tab-content">
+            <div class="reviews">
+                <div class="review">
+                    <h4>John<span>★★★★☆</span></h4>
+                    <p>This phone has amazing battery life and the camera quality is top-notch. Highly recommend!</p>
+                </div>
+                <div class="review">
+                    <h4>Meera<span>★★★★★</span></h4>
+                    <p>Absolutely love this phone! The display is stunning and it's very fast. Worth every penny.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="product-details">
+        <div class="product-image">
+            <img src="C:\Users\sahan\Downloads\112132 (1).jpg"alt="Phone Image">
+        </div>
+        <h2>Latest Smartphone</h2>
+        <p>
+            Experience the best of technology with the latest smartphone. Featuring a stunning display, powerful processor, and cutting-edge camera technology, this phone is designed to keep you connected and productive.
+        </p>
+        <p>
+            Key features include:
+            <ul>
+                <li>6.5-inch OLED display</li>
+                <li>Triple-lens camera system</li>
+                <li>128GB storage capacity</li>
+                <li>Long-lasting battery life</li>
+                <li>Fast charging support</li>
+            </ul>
+        </p>
+        <div class="price">$799.99</div>
+        <a href="#" class="add-to-cart">Add to Cart</a>
+    </div>
+</div>
+
+<div class="footer">
+    <p>&copy; 2024 Phone Store. All rights reserved.</p>
+</div>
+
+<script>
+    document.querySelector('.add-to-cart').addEventListener('click', function(event) {
+        event.preventDefault();
+        alert('Item added to cart!');
+    });
+
+    const tabs = document.querySelectorAll('.tab');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+            tabs.forEach(t => t.classList.remove('tab-active-btn'));
+            tabContents.forEach(tc => tc.classList.remove('tab-active'));
+            
+            document.getElementById(this.dataset.tab).classList.add('tab-active');
+            this.classList.add('tab-active-btn');
+        });
+    });
+</script>
+
+</body>
+</html>
